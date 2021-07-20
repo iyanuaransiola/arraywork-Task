@@ -10,23 +10,37 @@
     <h1>Working with Multi-Dimensional Array in Javascript</h1>
 
 
-   
-    <button id="btn2">SumAndProduct</button>
-    <button id="btn1">Displays all the array</button>
+    <button id="btn1">Displays array</button>
+    <button id="btn2">Sum And Product</button>
+  
 
 
 
     <script>
-       
-        let btn2 = document.getElementById("btn2");
         let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+       
        
 
-       
-        btn2.addEventListener("click", displaySumAndProduct);
         btn1.addEventListener("click", printingElement);
+        btn2.addEventListener("click", displaySumAndProduct);
+        
 
-      
+        
+        function printingElement() {
+            let num = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+
+            document.write("<ul>");
+                
+                for(let i = 0; i < num.length; i++) {
+                    document.write("<li>");
+                        for(let k = 0; k < num[i].length; k++) {
+                            document.write(`${num[i][k]}&nbsp;`)
+                        }
+                     document.write("</li>");
+                }
+            document.write("</ul>");
+        }
 
         function displaySumAndProduct() {
             let data = [5, 6,3, 8, 6, 7]
@@ -42,20 +56,6 @@
             
         }
 
-        function printingElement() {
-            let num = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
-
-            document.write("<ul>");
-                
-                for(let i = 0; i < num.length; i++) {
-                    document.write("<li>");
-                        for(let k = 0; k < num[i].length; k++) {
-                            document.write(`${num[i][k]}&nbsp;`)
-                        }
-                     document.write("</li>");
-                }
-            document.write("</ul>");
-        }
     </script>
     
 </body>
